@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./weather.css" />
+    <title>Weather Dashboard</title>
+</head>
+<body  class="flex-column min-100-vh">
+    <header class="flex-row justify-center">
+        Weather Dashboard
+    </header>
+
+    <main class="flex-row justify-space-between min-100-vh">
+        <div class="col-2">
+          <div>
+            <h3>Search By City</h3>
+            <form id="user-form" class="card-body">
+              <input id="cityInput" type="text" autofocus="true" class="form-input" />
+              <button id="btn" class="btn"><i class="fas fa-search"></i></button>
+            </form>
+          </div>
+            <div class="flex-row">
+                <div class="col-2" id="cities">
+                    <h3>City</h3>
+                    <h5 class="click"></h5>
+                </div>
+            </div>  
+        </div>
+      
+          <weather class="weatherboard">
+            <br>
+            <h3 id="date"></h3>
+            <h4><span id="cityName"></span></h4>
+            <div><img id="icon" src=""/></div>
+            <br>
+            <h6>Temperature: <span id="temp"></span></h6>
+            <br>
+            <h6>Humidity: <span id="humid"></span></h6>
+            <br>
+            <h6>Wind Speed: <span id="wind"></span></h6>
+            <br>
+            <h6>UV Index: <span id="uv"></span></h6>
+            <br>
+            <br>
+
+            <h3>5-Day Forecast:</h3>
+            <fiveday id="fiveday" class="flex-row justify-space-between">
+                <div id="day1" class="col-2">
+                    <h6 id="date1"></h6>
+                    <br>
+                    <span><img id="icon1" src=""/></span>
+                    <br>
+                    <h7 id="temperature1"></h7>
+                    <span id="temp1"></span>
+                    <br>
+                    <h7 id="humidity1"></h7>
+                    <span id="humid1"></span>
+                </div>
+
+                <div id="day2" class="col-2">
+                    <h6 id="date2"></h6>
+                    <br>
+                    <span><img id="icon2" src=""/></span>
+                    <br>
+                    <h7 id="temperature2"></h7>
+                    <span id="temp2"></span>
+                    <br>
+                    <h7 id="humidity2"></h7>
+                    <span id="humid2"></span>
+                </div>
+
+                <div id="day3" class="col-2">
+                    <h6 id="date3"></h6>
+                    <br>
+                    <span><img id="icon3" src=""/></span>
+                    <br>
+                    <h7 id="temperature3"></h7>
+                    <span id="temp3"></span>
+                    <br>
+                    <h7 id="humidity3"></h7>
+                    <span id="humid3"></span>
+                </div>
+
+                <div id="day4" class="col-2">
+                    <h6 id="date4"></h6>
+                    <br>
+                    <span><img id="icon4" src=""/></span>
+                    <br>
+                    <h7 id="temperature4"></h7>
+                    <span id="temp4"></span>
+                    <br>
+                    <h7 id="humidity4"></h7>
+                    <span id="humid4"></span>
+                </div>
+
+                <div id="day5" class=" col-2">
+                    <h6 id="date5"></h6>
+                    <br>
+                    <span><img id="icon5" src=""/></span>
+                    <br>
+                    <h7 id="temperature5"></h7>
+                    <span id="temp5"></span>
+                    <br>
+                    <h7 id="humidity5"></h7>
+                    <span id="humid5"></span>
+                </div> 
+            </fiveday>
+          </weather>
+      </main>
+
+    
+    <script src="./weather.js"></script>
+</body>
+</html>
